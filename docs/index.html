@@ -4,11 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./output.css" rel="stylesheet">
+    <title>Calculator</title>
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 
 </head>
 <body class="">
+  <!-- nav bar -->
    <div class="">
      <div class="bg-[#00A300] h-15 w-full flex items-center  shadow-lg ">
        <button class="cursor-pointer hover:scale-105 
@@ -19,38 +21,42 @@
           <button class="cursor-pointer hover:scale-110 
                         active:scale-95 transition-all duration-200 ease-in-out"><a href="https://github.com/imamanjangra/Currency-converter"><i class="fa-brands fa-github text-4xl text-black"></i></a></button>
         </div>  
-    </div><div></div>
+    </div>
+   
   <div class="calculator ">
     <!-- output screen -->
      <div class="border-l-2 border-r-2 border-t-2 h-25 w-85 mx-auto mt-30 rounded-t-2xl ">
-        <div class=""></div>
+        <div class="">
+          <p  class="display" ></p>
+        </div>
      </div>
      <div class="border-l-2 border-r-2 h-10 w-85 mx-auto flex items-center text-2xl ">
       <i class="fa-solid fa-clock ml-5"></i>
      </div>
-     
-     <div class="border-2 h-100 w-85 mx-auto grid grid-cols-4 text-2xl rounded-b-2xl ">
-      <button class="h-17 w-17 mt-2 ml-2 border-2 rounded-full"><p class="text-red-400 font-bold text-2xl">C</p></button>
-      <button class="h-17 w-17 mt-2 ml-2 border-2 rounded-full"><P class="font-bold text-[#00A300]"><i class="fa-solid fa-percent"></i></P></button>
-      <button class="h-17 w-17 mt-2 ml-2 border-2 rounded-full"><P class="font-bold text-[#00A300]"><i class="fa-solid fa-divide"></i></P></button>
-      <button class="h-17 w-17 mt-2 ml-2 border-2 rounded-full"><P class="font-bold text-[#00A300]"><i class="fa-solid fa-delete-left"></i></P></button>
-      <button class="h-17 w-17 mt-2 ml-2 border-2 rounded-full"><P>6</P></button>
-      <button class="h-17 w-17 mt-2 ml-2 border-2 rounded-full"><P>7</P></button>
-      <button class="h-17 w-17 mt-2 ml-2 border-2 rounded-full"><P>8</P></button>
-      <button class="h-17 w-17 mt-2 ml-2 border-2 rounded-full"><P class="font-bold text-[#00A300]"><i class="fa-solid fa-xmark"></i></P></button>
-      <button class="h-17 w-17 mt-2 ml-2 border-2 rounded-full"><P>4</P></button>
-      <button class="h-17 w-17 mt-2 ml-2 border-2 rounded-full"><P>5</P></button>
-      <button class="h-17 w-17 mt-2 ml-2 border-2 rounded-full"><P>6</P></button>
-      <button class="h-17 w-17 mt-2 ml-2 border-2 rounded-full"><P class="font-bold text-[#00A300]"><i class="fa-solid fa-minus"></i></P></button>
-      <button class="h-17 w-17 mt-2 ml-2 border-2 rounded-full"><P>1</P></button>
-      <button class="h-17 w-17 mt-2 ml-2 border-2 rounded-full"><P>2</P></button>
-      <button class="h-17 w-17 mt-2 ml-2 border-2 rounded-full"><P>3</P></button>
-      <button class="h-17 w-17 mt-2 ml-2 border-2 rounded-full"><P class="font-bold text-[#00A300]"><i class="fa-solid fa-plus"></i></P></button>
-      <button class="h-17 w-17 mt-2 ml-2 border-2 rounded-full"><P>00</P></button>
-      <button class="h-17 w-17 mt-2 ml-2 border-2 rounded-full"><P>0</P></button>
-      <button class="h-17 w-17 mt-2 ml-2 border-2 rounded-full"><P>.</P></button>
-      <button class="h-17 w-17 mt-2 ml-2 border-2 rounded-full bg-[#00A300] "><P class="font-bold text-white"><i class="fa-solid fa-equals"></i></P></button>
-     </div>
+     <!-- button  -->
+      <div class="border-2 h-100 w-85 mx-auto grid grid-cols-4 text-2xl rounded-b-2xl btn ">
+          <button value="c"  class="h-17 w-17 mt-2 ml-2 border-2 rounded-full s"><p class="text-red-400 font-bold text-2xl">C</p></button>
+          <button value="%" class="h-17 w-17 mt-2 ml-2 border-2 rounded-full s"><P class="font-bold text-[#00A300]"><i class="fa-solid fa-percent"></i></P></button>
+          <button value="/" class="h-17 w-17 mt-2 ml-2 border-2 rounded-full s"><P class="font-bold text-[#00A300]"><i class="fa-solid fa-divide"></i></P></button>
+          <button value="Backspace" class="h-17 w-17 mt-2 ml-2 border-2 rounded-full s"><P class="font-bold text-[#00A300]"><i class="fa-solid fa-delete-left"></i></P></button>
+          <button value="6" class="h-17 w-17 mt-2 ml-2 border-2 rounded-full s "><P>6</P></button>
+          <button value="7" class="h-17 w-17 mt-2 ml-2 border-2 rounded-full s"><P>7</P></button>
+          <button value="8" class="h-17 w-17 mt-2 ml-2 border-2 rounded-full s"><P>8</P></button>
+          <button value="*" class="h-17 w-17 mt-2 ml-2 border-2 rounded-full s"><P class="font-bold text-[#00A300]"><i class="fa-solid fa-xmark"></i></P></button>
+          <button value="4" class="h-17 w-17 mt-2 ml-2 border-2 rounded-full s" ><P>4</P></button>
+          <button value="5" class="h-17 w-17 mt-2 ml-2 border-2 rounded-full s"><P>5</P></button>
+          <button value="6" class="h-17 w-17 mt-2 ml-2 border-2 rounded-full s"><P>6</P></button>
+          <button value="-" class="h-17 w-17 mt-2 ml-2 border-2 rounded-full s"><P class="font-bold text-[#00A300]"><i class="fa-solid fa-minus"></i></P></button>
+          <button value="1" class="h-17 w-17 mt-2 ml-2 border-2 rounded-full s"><P>1</P></button>
+          <button value="2" class="h-17 w-17 mt-2 ml-2 border-2 rounded-full s"><P>2</P></button>
+          <button value="3" class="h-17 w-17 mt-2 ml-2 border-2 rounded-full s"><P>3</P></button>
+          <button value="+" class="h-17 w-17 mt-2 ml-2 border-2 rounded-full s"><P class="font-bold text-[#00A300]"><i class="fa-solid fa-plus"></i></P></button>
+          <button value="00" class="h-17 w-17 mt-2 ml-2 border-2 rounded-full s"><P>00</P></button>
+          <button value="0" class="h-17 w-17 mt-2 ml-2 border-2 rounded-full s"><P>0</P></button>
+          <button value="." class="h-17 w-17 mt-2 ml-2 border-2 rounded-full s"><P>.</P></button>
+          <button value="=" class="h-17 w-17 mt-2 ml-2 border-2 rounded-full s bg-[#00A300] "><P class="font-bold text-white"><i class="fa-solid fa-equals"></i></P></button>
+      </div>
   </div>
+<script src="script.js"></script>
 </body>
 </html>
