@@ -1,8 +1,30 @@
-let btn = document.querySelectorAll(".s");
+let btns = document.querySelectorAll(".s");   // saare buttons
 let display = document.querySelector(".display");
+let historyBox = document.querySelector(".history");
+let his_icone = document.querySelector(".his");
+let show_icone = document.querySelector(".show_icone");
+let btnBox = document.querySelector(".btn"); 
+let dark_btn = document.querySelector(".dark_btn");
+let body = document.querySelector("body");
+
+let dark_value = true
+dark_btn.addEventListener('click' , ()=>{
+  if(dark_value){
+    body.style.backgroundColor = "black";
+    body.style.color = "white";
+     dark_value = false;
+  }else{
+       body.style.backgroundColor = "white";
+        body.style.color = "black";
+        dark_value = true
+  }
+
+})
+
   let exp = "";
   let arr = [];
-btn.forEach(button => {
+
+btns.forEach(button => {
   button.addEventListener('click' , ()=>{
     let value = button.value;
     console.log(value);
@@ -39,6 +61,7 @@ btn.forEach(button => {
       if(exp != " "){
         let ans = eval(exp);
         display.innerText = ans;
+        history_fn(exp , ans)
       }
       else{
         alert("Entre a value ");
@@ -101,6 +124,7 @@ function run(){
       if(exp != " "){
         let ans = eval(exp);
         display.innerText = ans;
+         history_fn(exp , ans)
       }
       else{
         alert("Entre a value ");
@@ -116,4 +140,35 @@ function run(){
     }
    }
 
+})
+his_icone.addEventListener('click', ()=> {
+  historyBox.classList.remove("hidden");
+  his_icone.classList.add("!hidden")
+  show_icone.classList.remove("!hidden");
+  btnBox.classList.add("hidden");        
+});
+
+function history_fn(exp , ans){
+  console.log("fuction is call")
+  console.log(exp);
+  console.log(ans);
+  
+
+  
+  let p = document.createElement("p");
+   let p_ans = document.createElement("p");
+   p.style.marginLeft = "10px"
+   p_ans.style.marginLeft = "13px"
+   p_ans.style.marginBottom = "13spx"
+  p.innerText = exp;
+  p_ans.innerText = ans;
+  historyBox.appendChild(p);
+  historyBox.appendChild(p_ans)
+}
+
+show_icone.addEventListener('click' , ()=>{
+   historyBox.classList.add("hidden");
+   btnBox.classList.remove("hidden");
+   his_icone.classList.remove("!hidden")
+   show_icone.classList.add("!hidden");
 })
