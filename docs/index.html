@@ -18,7 +18,7 @@
  
   <!-- nav bar -->
    <div class="">
-     <div class="bg-[#00A300] h-15 w-full flex items-center  shadow-lg ">
+     <div class="bg-[#00A300] h-15 w-full flex items-center  shadow-2xl ">
        <button class="cursor-pointer hover:scale-105 
                         active:scale-95 transition-all duration-200 ease-in-out"><a href="index.html"> <img class="h-12 ml-5" src="https://i.ibb.co/Gfxs9vQF/Adobe-Express-file.png" alt="Logo"></a></button>
         <div class="ml-auto mr-3 md:mr-10 cursor-pointer  ">
@@ -29,62 +29,66 @@
         </div>  
     </div>
     
-  <div class="calculator ">
+  <div class="calculator  ">
     <!-- output screen -->
-     <div class="border-l-2 border-r-2 border-t-2 h-25 w-85 mx-auto mt-30 rounded-t-2xl ">
-        <div class="">
-          <p  class="display text-4xl text-right mt-10" ></p>
-        </div>
-     </div>
-     <div class="border-l-2 border-r-2 h-10 w-85 mx-auto flex items-center text-2xl ">
-      <i class=" fa-solid fa-clock ml-5 his"></i>
-      <i class=" fa-solid fa-calculator ml-5  show_icone !hidden"></i>
-     </div>
+    <div class="flex-row w-85  mx-auto  justify-center items-center shadow-2xl mt-30 rounded-2xl" >
+      <div class=" shadow-[0_-8px_10px_-3px_rgba(0,0,0,0.1),0_-4px_6px_-4px_rgba(0,0,0,0.1)] h-25 w-85 mx-auto   rounded-t-2xl ">
+          <div class="">
+            <p  class="display text-4xl text-right  " ></p>
+          </div>
+      </div>
+      <div class=" h-10 w-85 mx-auto flex items-center text-2xl  ">
+        <i class=" fa-solid fa-clock ml-5 his cursor-pointer hover:text-[#00A300]"></i>
+        <i class=" fa-solid fa-calculator ml-5  show_icone !hidden cursor-pointer hover:text-[#00A300]  "></i>
+      </div>
+     
      <!-- button  -->
-      <div class="border-2 h-96 w-85 mx-auto rounded-b-2xl hidden history text-2xl overflow-y-scroll ">
+      <div class=" h-96 w-85 mx-auto rounded-b-2xl hidden history text-2xl overflow-y-scroll ">
         <p  class="ml-32   text-2xl font-bold ">History</p>
       </div>
-      <div class="border-2 h-100 w-85 mx-auto grid grid-cols-4 text-2xl rounded-b-2xl btn ">
-          <button value="c"  class="h-17 w-17 mt-2 ml-2 border-2 rounded-full  s"><p class="text-red-400 font-bold text-2xl hover:scale-114 
+      <div class=" h-100 w-85 mx-auto grid grid-cols-4 text-2xl rounded-b-2xl btn ">
+          <button value="c"  class="h-17 w-17 mt-2 ml-2 bg-[#F6F6F6] rounded-full hover:bg-[#c6c6c6] s"><p class="text-red-400 font-bold text-2xl hover:scale-114 
                         active:scale-95 transition-all duration-200 ease-in-out">C</p></button>
-          <button value="%" class="h-17 w-17 mt-2 ml-2 border-2 rounded-full s"><P class="font-bold text-[#00A300] hover:scale-114 
+          <button value="%" class="h-17 w-17 mt-2 ml-2 hover:bg-[#c6c6c6] bg-[#F6F6F6] rounded-full  s"><P class="font-bold text-[#00A300] hover:scale-114 
                         active:scale-95 transition-all duration-200 ease-in-out"><i class="fa-solid fa-percent"></i></P></button>
-          <button value="/" class="h-17 w-17 mt-2 ml-2 border-2 rounded-full s"><P class="font-bold text-[#00A300] hover:scale-114 
+          <button value="/" class="h-17 w-17 mt-2 ml-2 hover:bg-[#c6c6c6] bg-[#F6F6F6] rounded-full s"><P class="font-bold text-[#00A300] hover:scale-114 
                         active:scale-95 transition-all duration-200 ease-in-out"><i class="fa-solid fa-divide"></i></P></button>
-          <button value="Backspace" class="h-17 w-17 mt-2 ml-2 border-2 rounded-full s"><P class="font-bold text-[#00A300] hover:scale-114 
+          <button value="Backspace" class="h-17 w-17 mt-2 hover:bg-[#c6c6c6] ml-2 bg-[#F6F6F6] rounded-full s"><P class="font-bold text-[#00A300] hover:scale-114 
                         active:scale-95 transition-all duration-200 ease-in-out"><i class="fa-solid fa-delete-left"></i></P></button>
-          <button value="6" class="h-17 w-17 mt-2 ml-2 border-2 rounded-full s "><P class="hover:scale-114 
+          <button value="6" class="h-17 w-17 mt-2 ml-2  bg-[#F6F6F6] hover:bg-[#c6c6c6] rounded-full s "><P class="hover:scale-114 
                         active:scale-95 transition-all duration-200 ease-in-out">6</P></button>
-          <button value="7" class="h-17 w-17 mt-2 ml-2 border-2 rounded-full s"><P class="hover:scale-114 
+          <button value="7" class="h-17 w-17 mt-2 ml-2 hover:bg-[#c6c6c6] bg-[#F6F6F6] rounded-full s"><P class="hover:scale-114 
                         active:scale-95 transition-all duration-200 ease-in-out">7</P></button>
-          <button value="8" class="h-17 w-17 mt-2 ml-2 border-2 rounded-full s"><P class="hover:scale-114 
+          <button value="8" class="h-17 w-17 mt-2 ml-2 hover:bg-[#c6c6c6] bg-[#F6F6F6] rounded-full s"><P class="hover:scale-114 
                         active:scale-95 transition-all duration-200 ease-in-out">8</P></button>
-          <button value="*" class="h-17 w-17 mt-2 ml-2 border-2 rounded-full s"><P class="font-bold text-[#00A300] hover:scale-114 
+          <button value="*" class="h-17 w-17 mt-2 ml-2 hover:bg-[#c6c6c6] bg-[#F6F6F6] rounded-full s"><P class="font-bold text-[#00A300] hover:scale-114 
                         active:scale-95 transition-all duration-200 ease-in-out"><i class="fa-solid fa-xmark"></i></P></button>
-          <button value="4" class="h-17 w-17 mt-2 ml-2 border-2 rounded-full s" ><P class="hover:scale-114 
+          <button value="4" class="h-17 w-17 mt-2 ml-2 hover:bg-[#c6c6c6] bg-[#F6F6F6] rounded-full s" ><P class="hover:scale-114 
                         active:scale-95 transition-all duration-200 ease-in-out">4</P></button>
-          <button value="5" class="h-17 w-17 mt-2 ml-2 border-2 rounded-full s"><P class="hover:scale-114 
+          <button value="5" class="h-17 w-17 mt-2 ml-2 hover:bg-[#c6c6c6] bg-[#F6F6F6] rounded-full s"><P class="hover:scale-114 
                         active:scale-95 transition-all duration-200 ease-in-out">5</P></button>
-          <button value="6" class="h-17 w-17 mt-2 ml-2 border-2 rounded-full s"><P class="hover:scale-114 
+          <button value="6" class="h-17 w-17 mt-2 ml-2 hover:bg-[#c6c6c6] bg-[#F6F6F6] rounded-full s"><P class="hover:scale-114 
                         active:scale-95 transition-all duration-200 ease-in-out">6</P></button>
-          <button value="-" class="h-17 w-17 mt-2 ml-2 border-2 rounded-full s"><P class="font-bold text-[#00A300] hover:scale-114 
+          <button value="-" class="h-17 w-17 mt-2 ml-2 hover:bg-[#c6c6c6] bg-[#F6F6F6] rounded-full s"><P class="font-bold text-[#00A300] hover:scale-114 
                         active:scale-95 transition-all duration-200 ease-in-out"><i class="fa-solid fa-minus"></i></P></button>
-          <button value="1" class="h-17 w-17 mt-2 ml-2 border-2 rounded-full s"><P class="hover:scale-114 
+          <button value="1" class="h-17 w-17 mt-2 ml- hover:bg-[#c6c6c6] bg-[#F6F6F6] rounded-full s"><P class="hover:scale-114 
                         active:scale-95 transition-all duration-200 ease-in-out">1</P></button>
-          <button value="2" class="h-17 w-17 mt-2 ml-2 border-2 rounded-full s"><P class="hover:scale-114 
+          <button value="2" class="h-17 w-17 mt-2 ml-2 hover:bg-[#c6c6c6] bg-[#F6F6F6] rounded-full s"><P class="hover:scale-114 
                         active:scale-95 transition-all duration-200 ease-in-out">2</P></button>
-          <button value="3" class="h-17 w-17 mt-2 ml-2 border-2 rounded-full s"><P class="hover:scale-114 
+          <button value="3" class="h-17 w-17 mt-2 ml-2 hover:bg-[#c6c6c6] bg-[#F6F6F6] rounded-full s"><P class="hover:scale-114 
                         active:scale-95 transition-all duration-200 ease-in-out">3</P></button>
-          <button value="+" class="h-17 w-17 mt-2 ml-2 border-2 rounded-full s"><P class="font-bold text-[#00A300] hover:scale-114 
+          <button value="+" class="h-17 w-17 mt-2 ml-2 hover:bg-[#c6c6c6] bg-[#F6F6F6] rounded-full s"><P class="font-bold text-[#00A300] hover:scale-114 
                         active:scale-95 transition-all duration-200 ease-in-out"><i class="fa-solid fa-plus"></i></P></button>
-          <button value="00" class="h-17 w-17 mt-2 ml-2 border-2 rounded-full s"><P class="hover:scale-114 
+          <button value="00" class="h-17 w-17 mt-2 ml-2 hover:bg-[#c6c6c6] bg-[#F6F6F6] rounded-full s"><P class="hover:scale-114 
                         active:scale-95 transition-all duration-200 ease-in-out">00</P></button>
-          <button value="0" class="h-17 w-17 mt-2 ml-2 border-2 rounded-full s"><P class="hover:scale-114 
+          <button value="0" class="h-17 w-17 mt-2 ml-2 hover:bg-[#c6c6c6] bg-[#F6F6F6] rounded-full s"><P class="hover:scale-114 
                         active:scale-95 transition-all duration-200 ease-in-out">0</P></button>
-          <button value="." class="h-17 w-17 mt-2 ml-2 border-2 rounded-full s"><P class="hover:scale-114 
+          <button value="." class="h-17 w-17 mt-2 ml-2 hover:bg-[#c6c6c6] bg-[#F6F6F6] rounded-full s"><P class="hover:scale-114 
                         active:scale-95 transition-all duration-200 ease-in-out" >.</P></button>
-          <button value="=" class="h-17 w-17 mt-2 ml-2 border-2 rounded-full s bg-[#00A300] "><P class="font-bold text-white hover:scale-114 
+          <button value="=" class="h-17 w-17 mt-2 ml-2   rounded-full s bg-[#00A300] "><P class="font-bold text-white hover:scale-114 
                         active:scale-95 transition-all duration-200 ease-in-out"><i class="fa-solid fa-equals "></i></P></button>
+      </div>
+      </div>
       </div>
   </div>
 <script src="script.js"></script>
