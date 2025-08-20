@@ -6,14 +6,62 @@ let show_icone = document.querySelector(".show_icone");
 let btnBox = document.querySelector(".btn"); 
 let dark_btn = document.querySelector(".dark_btn");
 let body = document.querySelector("body");
+let main_box = document.querySelector(".main_box");
+let gr = document.querySelector(".gr");
 
 let dark_value = true
 dark_btn.addEventListener('click' , ()=>{
   if(dark_value){
     body.style.backgroundColor = "black";
+
+    main_box.style.boxShadow = "0px 0px 20px white";
+
+    btns.forEach(i => {
+      i.style.backgroundColor = "#141314"
+    });
+
+    btns.forEach(i => {
+      i.addEventListener('mouseover' , ()=>{
+        i.style.backgroundColor = "#444444"
+      })
+      i.addEventListener("mouseout" , ()=>{
+        i.style.backgroundColor = "#141314"
+      })
+    });
+
+    gr.style.setProperty("background-color", "#00A300", "important");
+    gr.addEventListener('mouseover' , ()=>{
+     gr.style.setProperty("background-color", "#00A300", "important");
+    })
+    gr.addEventListener('mouseout' , ()=>{
+      gr.style.setProperty("background-color", "#00A300", "important");
+    })
+
     body.style.color = "white";
-     dark_value = false;
+    dark_value = false;
   }else{
+
+    main_box.style.boxShadow = "0 25px 50px -12px rgba(0, 0, 0, 0.25)";
+    btns.forEach(i => {
+      i.style.backgroundColor = "#F6F6F6"
+    });
+    
+    btns.forEach(i => {
+      i.addEventListener('mouseover' , ()=>{
+        i.style.backgroundColor = "#c6c6c6"
+      })
+      i.addEventListener("mouseout" , ()=>{
+        i.style.backgroundColor = "#F6F6F6"
+      })
+    });
+
+    gr.style.setProperty("background-color", "#00A300", "important");
+    gr.addEventListener('mouseover' , ()=>{
+     gr.style.setProperty("background-color", "#00A300", "important");
+    })
+    gr.addEventListener('mouseout' , ()=>{
+      gr.style.setProperty("background-color", "#00A300", "important");
+    })
        body.style.backgroundColor = "white";
         body.style.color = "black";
         dark_value = true
@@ -23,7 +71,7 @@ dark_btn.addEventListener('click' , ()=>{
 
   let exp = "";
   let arr = [];
-
+  let p_arr = [];
 btns.forEach(button => {
   button.addEventListener('click' , ()=>{
     let value = button.value;
@@ -34,6 +82,7 @@ btns.forEach(button => {
            return;
       }
     }
+
     if(value == "c"){
        if(exp == ""){
         alert("Entre number first")
@@ -41,6 +90,27 @@ btns.forEach(button => {
       exp = " ";
       display.innerText = " ";
     } 
+    else if(value == "%"){
+      console.log(exp+"%");
+      let p_value = exp;
+      p_arr.push(p_value)
+      console.log(p_arr)
+     
+      let parts = exp.split("*"); 
+      let number = parts[1];
+      let f_no = parts[0];
+     console.log(number);
+
+     let o_no = number/100;
+     console.log(o_no);
+     
+     console.log(`${f_no}*${o_no}`);
+     display.innerHTML = `${f_no}*${o_no}`;
+     exp = `${f_no}*${o_no}`;
+     
+      
+
+    }
    
     else if(value == "Backspace"){
       console.log(exp);
@@ -102,7 +172,29 @@ function run(){
      }
       exp = " ";
       display.innerText = " ";
-    } 
+    }
+    
+    else if(key == "%"){
+      console.log(exp+"%");
+      let p_value = exp;
+      p_arr.push(p_value)
+      console.log(p_arr)
+     
+      let parts = exp.split("*"); 
+      let number = parts[1];
+      let f_no = parts[0];
+     console.log(number);
+
+     let o_no = number/100;
+     console.log(o_no);
+     
+     console.log(`${f_no}*${o_no}`);
+     display.innerHTML = `${f_no}*${o_no}`;
+     exp = `${f_no}*${o_no}`;
+     
+      
+
+    }
 
     else if(key == "Backspace"){
       if(exp == ""){
@@ -157,11 +249,16 @@ function history_fn(exp , ans){
   
   let p = document.createElement("p");
    let p_ans = document.createElement("p");
-   p.style.marginLeft = "10px"
-   p_ans.style.marginLeft = "13px"
+   p.style.marginLeft = "10px";
+    p.style.fontWeight = "bold";       
+    // p.style.color = "#333";   
+
+  p_ans.style.marginLeft = "25px";
    p_ans.style.marginBottom = "13spx"
-  p.innerText = exp;
-  p_ans.innerText = ans;
+   p_ans.style.fontStyle = "italic";
+
+  p.innerText = `• ${exp}`;
+  p_ans.innerText = `Ans=${ans}`;
   historyBox.appendChild(p);
   historyBox.appendChild(p_ans)
 }
