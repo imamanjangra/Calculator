@@ -91,23 +91,58 @@ btns.forEach(button => {
       display.innerText = " ";
     } 
     else if(value == "%"){
-      console.log(exp+"%");
+      console.log(exp);
       let p_value = exp;
       p_arr.push(p_value)
       console.log(p_arr)
-     
-      let parts = exp.split("*"); 
-      let number = parts[1];
-      let f_no = parts[0];
-     console.log(number);
 
-     let o_no = number/100;
-     console.log(o_no);
-     
-     console.log(`${f_no}*${o_no}`);
-     display.innerHTML = `${f_no}*${o_no}`;
-     exp = `${f_no}*${o_no}`;
-     
+        if(exp.includes("*")){
+           let parts = exp.split("*"); 
+            let number = parts[1];
+            let f_no = parts[0];
+          console.log(number);
+
+          let o_no = number/100;
+          console.log(o_no);
+          
+          console.log(`${f_no}*${o_no}`);
+          display.innerHTML = `${f_no}*${o_no}`;
+          exp = `${f_no}*${o_no}`;
+          console.log("*show");
+          
+          return
+      }
+      else if(exp.includes("+")){
+        console.log("ok tested");
+         let parts = exp.split("+"); 
+          let number = parts[1];
+           let f_no = parts[0];
+            let o_no = number/100;
+            let m = o_no*f_no;
+            console.log(`${f_no}+${m}`);
+            display.innerHTML = `${f_no}+${m}`;
+            exp = `${f_no}+${m}`;
+      }
+      else if(exp.includes("-")){
+        console.log("ok tested");
+         let parts = exp.split("-"); 
+          let number = parts[1];
+           let f_no = parts[0];
+            let o_no = number/100;
+            let m = o_no*f_no;
+            console.log(`${f_no}-${m}`);
+            display.innerHTML = `${f_no}-${m}`;
+            exp = `${f_no}-${m}`;
+      }
+      else{
+         let last_v = Number(exp);
+         let o_value = last_v/100;
+         console.log(o_value);
+         display.innerText = o_value;
+         exp = o_value;
+
+        
+      }
       
 
     }
@@ -175,23 +210,58 @@ function run(){
     }
     
     else if(key == "%"){
-      console.log(exp+"%");
+      console.log(exp);
       let p_value = exp;
       p_arr.push(p_value)
       console.log(p_arr)
-     
-      let parts = exp.split("*"); 
-      let number = parts[1];
-      let f_no = parts[0];
-     console.log(number);
 
-     let o_no = number/100;
-     console.log(o_no);
-     
-     console.log(`${f_no}*${o_no}`);
-     display.innerHTML = `${f_no}*${o_no}`;
-     exp = `${f_no}*${o_no}`;
-     
+        if(exp.includes("*")){
+           let parts = exp.split("*"); 
+            let number = parts[1];
+            let f_no = parts[0];
+          console.log(number);
+
+          let o_no = number/100;
+          console.log(o_no);
+          
+          console.log(`${f_no}*${o_no}`);
+          display.innerHTML = `${f_no}*${o_no}`;
+          exp = `${f_no}*${o_no}`;
+          console.log("*show");
+          
+          return
+      }
+      else if(exp.includes("+")){
+        console.log("ok tested");
+         let parts = exp.split("+"); 
+          let number = parts[1];
+           let f_no = parts[0];
+            let o_no = number/100;
+            let m = o_no*f_no;
+            console.log(`${f_no}+${m}`);
+            display.innerHTML = `${f_no}+${m}`;
+            exp = `${f_no}+${m}`;
+      }
+      else if(exp.includes("-")){
+        console.log("ok tested");
+         let parts = exp.split("-"); 
+          let number = parts[1];
+           let f_no = parts[0];
+            let o_no = number/100;
+            let m = o_no*f_no;
+            console.log(`${f_no}-${m}`);
+            display.innerHTML = `${f_no}-${m}`;
+            exp = `${f_no}-${m}`;
+      }
+      else{
+         let last_v = Number(exp);
+         let o_value = last_v/100;
+         console.log(o_value);
+         display.innerText = o_value;
+         exp = o_value;
+
+        
+      }
       
 
     }
